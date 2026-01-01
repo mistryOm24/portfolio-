@@ -56,38 +56,38 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Contact Information */}
-          <div className="space-y-8 animate-fade-in-left">
-            <div className="glass rounded-2xl p-8">
-              <h3 id="contact-get-in-touch" className="text-2xl font-bold mb-8">Get In Touch</h3>
+          <div className="space-y-6 lg:space-y-8 animate-fade-in-left">
+            <div className="glass rounded-2xl p-5 sm:p-8">
+              <h3 id="contact-get-in-touch" className="text-2xl font-bold mb-6 sm:mb-8 text-center lg:text-left">Get In Touch</h3>
               
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {contact.methods.map((method, index) => (
                   <div key={method.label} className={`animate-fade-in-up delay-${(index + 1) * 100}`}>
                     {method.href ? (
                       <a
                         href={method.href}
-                        className="flex items-center gap-4 p-4 rounded-xl hover:bg-white/5 transition-all duration-300 group"
+                        className="flex flex-col sm:flex-row items-center sm:items-center gap-3 sm:gap-4 p-4 rounded-xl hover:bg-white/5 transition-all duration-300 group text-center sm:text-left"
                       >
-                        <div className={`w-12 h-12 bg-gradient-to-r ${method.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                        <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${method.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                           {contactIcons[method.label.toLowerCase() as keyof typeof contactIcons]}
                         </div>
-                        <div>
+                        <div className="min-w-0">
                           <p className="text-sm text-white/60 mb-1">{method.label}</p>
-                          <p className="text-lg font-medium group-hover:text-blue-400 transition-colors duration-300">
+                          <p className="text-lg font-medium group-hover:text-blue-400 transition-colors duration-300 break-all sm:break-normal">
                             {method.value}
                           </p>
                         </div>
                       </a>
                     ) : (
-                      <div className="flex items-center gap-4 p-4">
-                        <div className={`w-12 h-12 bg-gradient-to-r ${method.color} rounded-xl flex items-center justify-center`}>
+                      <div className="flex flex-col sm:flex-row items-center sm:items-center gap-3 sm:gap-4 p-4 text-center sm:text-left">
+                        <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${method.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
                           {contactIcons[method.label.toLowerCase() as keyof typeof contactIcons]}
                         </div>
-                        <div>
+                        <div className="min-w-0">
                           <p className="text-sm text-white/60 mb-1">{method.label}</p>
-                          <p className="text-lg font-medium">{method.value}</p>
+                          <p className="text-lg font-medium break-all sm:break-normal">{method.value}</p>
                         </div>
                       </div>
                     )}
@@ -97,9 +97,9 @@ export default function Contact() {
             </div>
 
             {/* Social Links */}
-            <div className="glass rounded-2xl p-8 animate-fade-in-up delay-400">
-              <h3 className="text-xl font-bold mb-6">Connect With Me</h3>
-              <div className="flex gap-4">
+            <div className="glass rounded-2xl p-5 sm:p-8 animate-fade-in-up delay-400">
+              <h3 className="text-xl font-bold mb-6 text-center lg:text-left">Connect With Me</h3>
+              <div className="flex gap-4 justify-center lg:justify-start">
                 {contact.social.map((social, index) => (
                   <a
                     key={social.name}

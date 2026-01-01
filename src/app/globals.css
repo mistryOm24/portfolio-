@@ -512,3 +512,49 @@ section {
   background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%);
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
+
+/* Small Screen Adjustments */
+@media (max-width: 400px) {
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .glass, .glass-strong {
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Extra Small Screen Adjustments (< 300px) */
+@media (max-width: 300px) {
+  html {
+    font-size: 14px;
+  }
+  
+  section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .glass, .glass-strong {
+    padding: 1rem !important;
+  }
+  
+  /* Force wrap everything */
+  .flex {
+    flex-wrap: wrap;
+  }
+  
+  /* Ensure text doesn't overflow */
+  p, span, a {
+    word-break: break-all;
+  }
+}
