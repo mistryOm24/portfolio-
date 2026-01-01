@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import StructuredData from "@/components/seo/StructuredData";
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -73,6 +75,8 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <StructuredData />
+
         </ErrorBoundary>
       </body>
     </html>

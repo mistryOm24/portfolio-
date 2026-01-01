@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://your-domain.vercel.app/sitemap.xml", // 🔴 replace after deploy
+    sitemap: "https://om-mistry-portfolio.vercel.app/sitemap.xml",
   };
 }

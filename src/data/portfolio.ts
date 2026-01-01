@@ -188,6 +188,11 @@ export const portfolioData = {
         href: "https://www.linkedin.com/in/om-mistry-277b393a1",
         icon: "linkedin",
       },
+      {
+        name: "Instagram",
+        href: "https://www.instagram.com/om_mistry025",
+        icon: "instagram",
+      }
     ],
     cta: {
       title: "Ready to hire me?",
