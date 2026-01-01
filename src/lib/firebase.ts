@@ -16,5 +16,8 @@ const firebaseConfig = {
 
 
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+// Safely initialize Realtime Database
 export const db = firebaseConfig.databaseURL ? getDatabase(app) : null;
-export const analytics = typeof window !== "undefined" ? getAnalytics(app) : null;
+
+const isAnalyticsSupported = typeof window !== "undefined" && firebaseConfig.projectId && firebaseConfig.apiKey;
+export const analytics = isAnalyticsSupported ? getAnalytics(app) : null;
