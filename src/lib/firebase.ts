@@ -16,8 +16,15 @@ const firebaseConfig = {
 
 
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+
 // Safely initialize Realtime Database
+if (!firebaseConfig.databaseURL) {
+  console.error("Firebase: Database URL is missing! Check NEXT_PUBLIC_FIREBASE_DATABASE_URL in Vercel.");
+}
 export const db = firebaseConfig.databaseURL ? getDatabase(app) : null;
 
 const isAnalyticsSupported = typeof window !== "undefined" && firebaseConfig.projectId && firebaseConfig.apiKey;
+if (typeof window !== "undefined" && !isAnalyticsSupported) {
+  console.warn("Firebase: Analytics not initialized. Missing Project ID or API Key.");
+}
 export const analytics = isAnalyticsSupported ? getAnalytics(app) : null;
