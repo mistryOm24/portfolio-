@@ -1,3 +1,5 @@
+import LiveUsers from "@/components/LiveUsers";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -164,6 +166,7 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-6 text-sm text-white/50 animate-fade-in-up delay-700">
+              <LiveUsers />
               <span>Built with Next.js & Tailwind CSS</span>
               <div className="flex items-center gap-1">
                 <span>Made with</span>
