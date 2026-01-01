@@ -1,6 +1,8 @@
-import { projects } from "@/data/projects";
+import { portfolioData } from "@/data/portfolio";
 
 export default function Projects() {
+  const { projects } = portfolioData;
+
   return (
     <section id="projects" className="py-32 max-w-7xl mx-auto px-6 relative">
       {/* Background Elements */}
@@ -11,7 +13,7 @@ export default function Projects() {
         {/* Header */}
         <div className="text-center mb-20 animate-fade-in-up">
           <h2 id="projects-title" className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
-            Featured Projects
+            {projects.title}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
@@ -21,7 +23,7 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <div className="grid gap-12 lg:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project, index) => (
+          {projects.list.map((project, index) => (
             <article
               key={project.title}
               className={`group glass rounded-2xl p-8 hover-lift transition-all duration-500 animate-fade-in-up delay-${(index + 1) * 200}`}
@@ -35,13 +37,13 @@ export default function Projects() {
                     </svg>
                   </div>
                   
-                  {project.liveUrl && (
+                  {project.links?.live && (
                     <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      project.liveUrl === "#" 
-                        ? "bg-yellow-500/20 text-yellow-400" 
-                        : "bg-green-500/20 text-green-400"
+                      project.links.live.startsWith("http") 
+                        ? "bg-green-500/20 text-green-400"
+                        : "bg-yellow-500/20 text-yellow-400" 
                     }`}>
-                      {project.liveUrl === "#" ? "In Development" : "Live"}
+                      {project.links.live.startsWith("http") ? "Live" : "In Development"}
                     </div>
                   )}
                 </div>
@@ -74,7 +76,7 @@ export default function Projects() {
               <div className="mb-8">
                 <h4 className="text-sm font-semibold text-white/80 mb-3">Key Features</h4>
                 <ul className="space-y-2">
-                  {project.highlights.map((point, pointIndex) => (
+                  {project.highlights?.map((point, pointIndex) => (
                     <li key={pointIndex} className="flex items-start gap-3 text-sm text-white/70">
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
                       <span>{point}</span>
@@ -84,9 +86,9 @@ export default function Projects() {
               </div>
 
               {/* Action Button */}
-              {project.liveUrl && (
+              {project.links?.live && (
                 <div className="pt-4 border-t border-white/10">
-                  {project.liveUrl === "#" ? (
+                  {!project.links.live.startsWith("http") ? (
                     <div className="flex items-center gap-2 text-yellow-400 font-medium">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -95,7 +97,7 @@ export default function Projects() {
                     </div>
                   ) : (
                     <a
-                      href={project.liveUrl}
+                      href={project.links.live}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-blue-400 font-medium hover:text-blue-300 transition-colors duration-300 group/link"

@@ -104,6 +104,11 @@ export const portfolioData = {
         image: "/projects/ecommerce.jpg",
         tech: ["React", "TypeScript", "Tailwind", "Node.js"],
         status: "Live",
+        highlights: [
+          "Real-time inventory management",
+          "Stripe payment integration",
+          "Admin dashboard with analytics",
+        ],
         links: {
           live: "https://example.com",
           github: "https://github.com",
@@ -117,6 +122,11 @@ export const portfolioData = {
         image: "/projects/taskapp.jpg",
         tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
         status: "In Development",
+        highlights: [
+          "Real-time collaboration with WebSockets",
+          "Drag and drop kanban board",
+          "Team role management",
+        ],
         links: {
           live: "https://example.com",
           github: "https://github.com",
@@ -129,6 +139,11 @@ export const portfolioData = {
         image: "/projects/weather.jpg",
         tech: ["React", "JavaScript", "CSS3", "Weather API"],
         status: "Live",
+        highlights: [
+          "Geolocation support",
+          "5-day forecast visualization",
+          "Dark/Light mode toggle",
+        ],
         links: {
           live: "https://example.com",
           github: "https://github.com",
@@ -165,12 +180,12 @@ export const portfolioData = {
     social: [
       {
         name: "GitHub",
-        href: "https://github.com/",
+        href: "https://github.com/mistryOm24",
         icon: "github",
       },
       {
         name: "LinkedIn",
-        href: "https://www.linkedin.com/",
+        href: "https://www.linkedin.com/in/om-mistry-277b393a1",
         icon: "linkedin",
       },
     ],

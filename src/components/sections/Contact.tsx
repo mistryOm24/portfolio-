@@ -133,10 +133,10 @@ export default function Contact() {
                   </p>
                 </div>
 
-                <div className="space-y-4">
+                  <div className="space-y-4">
                   <button
                     onClick={() => {
-                      const email = 'mistryom024@gmail.com';
+                      const email = contact.cta.email;
                       
                       // Try modern clipboard API first
                       if (navigator.clipboard && window.isSecureContext) {
