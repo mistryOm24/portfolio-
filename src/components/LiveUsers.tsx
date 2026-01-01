@@ -12,6 +12,8 @@ export default function LiveUsers() {
     setMounted(true);
     
     try {
+      if (!db) return;
+
       // Create a reference to the presence system
       const connectedRef = ref(db, ".info/connected");
       const connectionsRef = ref(db, "connections");
