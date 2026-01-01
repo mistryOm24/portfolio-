@@ -189,14 +189,14 @@ export const portfolioData = {
   tour: {
     steps: [
       {
-        target: "hero",
+        target: "hero-name",
         text: "Welcome! This is my portfolio. Let me show you around.",
       },
-      { target: "about", text: "Learn about my experience and skills here." },
-      { target: "skills", text: "Check out my technical expertise." },
-      { target: "projects", text: "Explore my real-world projects." },
+      { target: "about-title", text: "Learn about my experience and skills here." },
+      { target: "skills-title", text: "Check out my technical expertise." },
+      { target: "projects-title", text: "Explore my real-world projects." },
       {
-        target: "contact",
+        target: "contact-get-in-touch",
         text: "Ready to connect? Find my contact info here.",
       },
     ],

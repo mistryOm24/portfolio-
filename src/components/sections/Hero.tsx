@@ -20,7 +20,7 @@ export default function Hero() {
         {/* Title Section */}
         <div className="mb-8 animate-fade-in-up">
           <p className="text-xl md:text-2xl text-white/60 mb-4">{hero.greeting}</p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+          <h1 id="hero-name" className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
             <span className="block gradient-text">{hero.name}</span>
           </h1>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 gradient-text">

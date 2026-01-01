@@ -10,7 +10,7 @@ export default function Projects() {
       <div className="relative">
         {/* Header */}
         <div className="text-center mb-20 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+          <h2 id="projects-title" className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
             Featured Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"></div>

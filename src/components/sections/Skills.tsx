@@ -61,7 +61,7 @@ export default function Skills() {
             headerVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-[50px]'
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text animate-glow-text">
+          <h2 id="skills-title" className="text-4xl md:text-5xl font-bold mb-4 gradient-text animate-glow-text">
             Skills & Technologies
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6 animate-gradient"></div>

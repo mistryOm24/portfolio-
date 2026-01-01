@@ -47,7 +47,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-6 relative">
         {/* Header */}
         <div className="text-center mb-20 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+          <h2 id="contact-title" className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
             {contact.title}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"></div>
@@ -60,7 +60,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8 animate-fade-in-left">
             <div className="glass rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-8">Get In Touch</h3>
+              <h3 id="contact-get-in-touch" className="text-2xl font-bold mb-8">Get In Touch</h3>
               
               <div className="space-y-6">
                 {contact.methods.map((method, index) => (
