@@ -5,6 +5,7 @@ import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Chatbot from "@/components/Chatbot";
 import TourGuide from "@/components/TourGuide";
+import LeadCaptureModal from "@/components/LeadCaptureModal";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Contact />
       <Chatbot />
       <TourGuide />
+      <LeadCaptureModal />
     </main>
   );
 }

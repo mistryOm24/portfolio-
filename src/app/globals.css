@@ -10,6 +10,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  cursor: none;
+}
+
+a, button, [role='button'], input, textarea, select, label {
+  cursor: none;
 }
 
 /* Typography polish */
@@ -492,25 +497,54 @@ section {
   animation: blink 1.5s infinite;
 }
 
+/* Custom Cursor */
+* {
+  cursor: none !important;
+}
+
+.custom-cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(96, 165, 250, 0.7);
+  border-radius: 50%;
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  will-change: transform;
+}
+
+.custom-cursor-ring.cursor-hover {
+  width: 52px;
+  height: 52px;
+  border-color: rgba(167, 139, 250, 0.9);
+  background: rgba(167, 139, 250, 0.08);
+}
+
+/* Cursor trailing squares */
+@keyframes cursorSquare {
+  0%   { opacity: 0.7; transform: translate(-50%, -50%) rotate(45deg) scale(1); }
+  100% { opacity: 0;   transform: translate(-50%, -50%) rotate(90deg) scale(0.2); }
+}
+
+.animate-cursor-square {
+  animation: cursorSquare 0.6s ease-out forwards;
+}
+
 /* Custom scrollbar enhanced */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, #1a1a1a 0%, #0c0c0c 100%);
-  border-radius: 5px;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #60a5fa 0%, #a78bfa 100%);
-  border-radius: 5px;
-  transition: all 0.3s ease;
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%);
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
 }
 
 /* Small Screen Adjustments */

@@ -4,7 +4,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import StructuredData from "@/components/seo/StructuredData";
-
+import CookieConsent from "@/components/CookieConsent";
+import ConditionalLayout from "@/components/layout/ConditionalLayout";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -72,11 +73,8 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <ErrorBoundary>
-          <Navbar />
-          {children}
-          <Footer />
+          <ConditionalLayout>{children}</ConditionalLayout>
           <StructuredData />
-
         </ErrorBoundary>
       </body>
     </html>

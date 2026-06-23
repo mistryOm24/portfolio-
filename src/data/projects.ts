@@ -18,7 +18,7 @@ export const projects: Project[] = [
       "Integrated payment gateway for subscriptions",
       "Connected real-time APIs for medical analytics",
     ],
-    liveUrl: "#",
+    liveUrl: "https://biofateai1.web.app",
   },
   {
     title: "Bug Nova",
@@ -31,17 +31,17 @@ export const projects: Project[] = [
       "Handled team collaboration and permission flows",
       "Owned major frontend and backend features",
     ],
-    liveUrl: "#",
+    liveUrl: "",
   },
-  {
-    title: "AI Chatbot",
-    description:
-      "Interactive AI chatbot with real-time responses using Google AI APIs.",
-    tech: ["React", "JavaScript", "Google AI APIs"],
-    highlights: [
-      "Designed responsive and interactive chat UI",
-      "Integrated Google AI APIs for real-time responses",
-      "Improved response accuracy and user experience",
-    ],
-  },
+  // {
+  //   title: "AI Chatbot",
+  //   description:
+  //     "Interactive AI chatbot with real-time responses using Google AI APIs.",
+  //   tech: ["React", "JavaScript", "Google AI APIs"],
+  //   highlights: [
+  //     "Designed responsive and interactive chat UI",
+  //     "Integrated Google AI APIs for real-time responses",
+  //     "Improved response accuracy and user experience",
+  //   ],
+  // },
 ];

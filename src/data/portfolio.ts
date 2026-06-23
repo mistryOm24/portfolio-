@@ -4,7 +4,7 @@ export const portfolioData = {
     name: "Om Mistry",
     title: "Frontend Developer",
     location: "Ahmedabad, Gujarat",
-    email: "mistryom024@gmail.com",
+    email: "mistryom18@gmail.com",
     phone: "+91 93136 52019",
     experience: "1.5+",
     projectsCount: "10+",
@@ -15,7 +15,7 @@ export const portfolioData = {
   hero: {
     greeting: "Hi, I'm",
     name: "Om Mistry",
-    title: "Frontend Developer",
+    title: "Software Developer | Software Engineer ",
     description:
       "I build exceptional digital experiences with modern web technologies. Passionate about creating clean, performant, and user-focused applications.",
     cta: {
@@ -28,8 +28,7 @@ export const portfolioData = {
   about: {
     title: "About Me",
     description: [
-      "I'm a passionate Frontend Developer with 1.5+ years of experience building real-world applications using React, TypeScript, and modern frontend tools.",
-      "I focus on creating clean UI, optimizing performance, and building scalable architecture that delivers exceptional user experiences.",
+      "I am a Software Developer with 1.5+ years of experience in building scalable web applications using JavaScript, TypeScript, React.js, Node.js, Express.js, MongoDB, and REST APIs. I have worked on multiple live projects and have experience with Redux Toolkit, Firebase, and modern web technologies. I am passionate about developing high-quality software and continuously learning new technologies. I would be excited to contribute my skills and grow with Saawahi IT Solution LLP.",
     ],
     stats: [
       { value: "1.5+", label: "Years Experience", color: "text-blue-400" },
@@ -63,20 +62,36 @@ export const portfolioData = {
         name: "Frontend",
         color: "from-blue-500 to-cyan-500",
         skills: [
-          { name: "React", level: 90 },
+          { name: "HTML5", level: 90 },
+          { name: "JavaScript (ES6+)", level: 95 },
           { name: "TypeScript", level: 85 },
+          { name: "React.js", level: 90 },
           { name: "Next.js", level: 80 },
-          { name: "JavaScript", level: 95 },
+          { name: "React Router", level: 90 },
+          { name: "Redux Toolkit", level: 90 },
+          { name: "Zustand", level: 80 },
+          { name: "Node.js", level: 80 },
+          { name: "Express.js", level: 80 },
+          { name: "NestJS", level: 75 },
+          { name: "REST APIs", level: 85 },
+          { name: "MongoDB", level: 80 },
+          { name: "SQL", level: 75 },
+          { name: "Firebase", level: 85 },
+          { name: "Supabase", level: 75 },
         ],
       },
       {
-        name: "Styling",
+        name: "Styling & UI",
         color: "from-purple-500 to-pink-500",
         skills: [
-          { name: "Tailwind CSS", level: 90 },
           { name: "CSS3", level: 85 },
+          { name: "Tailwind CSS", level: 90 },
+          { name: "Bootstrap", level: 80 },
           { name: "Sass", level: 75 },
+          { name: "Material UI", level: 85 },
+          { name: "Shadcn/UI", level: 90 },
           { name: "Styled Components", level: 70 },
+          { name: "Responsive Design", level: 95 },
         ],
       },
       {
@@ -84,9 +99,13 @@ export const portfolioData = {
         color: "from-green-500 to-emerald-500",
         skills: [
           { name: "Git", level: 85 },
+          { name: "GitHub", level: 85 },
+          { name: "Postman", level: 85 },
           { name: "Webpack", level: 70 },
-          { name: "REST APIs", level: 80 },
-          { name: "Responsive Design", level: 95 },
+          { name: "Vite", level: 85 },
+          { name: "npm", level: 85 },
+          { name: "VS Code", level: 95 },
+          { name: "Notion", level: 80 },
         ],
       },
     ],
@@ -160,8 +179,8 @@ export const portfolioData = {
     methods: [
       {
         label: "Email",
-        value: "mistryom024@gmail.com",
-        href: "mailto:mistryom024@gmail.com?subject=Portfolio Contact&body=Hi Om, I'm interested in discussing a project with you.",
+        value: "mistryom18@gmail.com",
+        href: "mailto:mistryom18@gmail.com?subject=Portfolio Contact&body=Hi Om, I'm interested in discussing a project with you.",
         color: "from-blue-500 to-cyan-500",
       },
       {
@@ -180,26 +199,31 @@ export const portfolioData = {
     social: [
       {
         name: "GitHub",
-        href: "https://github.com/mistryOm24",
+        href: "https://github.com/mistriom",
         icon: "github",
       },
       {
         name: "LinkedIn",
-        href: "https://www.linkedin.com/in/om-mistry-277b393a1",
+        href: "https://www.linkedin.com/in/om-mistri-1857a8234",
         icon: "linkedin",
       },
       {
-        name: "Instagram",
-        href: "https://www.instagram.com/om_mistry025",
-        icon: "instagram",
-      }
+        name: "HackerRank",
+        href: "https://www.hackerrank.com/profile/mistryom18",
+        icon: "hackerrank",
+      },
+      {
+        name: "Leetcode",
+        href: "https://leetcode.com/u/code_om",
+        icon: "leetcode",
+      },
     ],
     cta: {
       title: "Ready to hire me?",
       description:
         "I'm available for full-time roles, freelance work, and long-term projects. Let's discuss how I can help bring your ideas to life.",
       email:
-        "mailto:mistryom024@gmail.com?subject=Portfolio Contact&body=Hi Om, I'm interested in discussing a project with you.",
+        "mailto:mistryom18@gmail.com?subject=Portfolio Contact&body=Hi Om, I'm interested in discussing a project with you.",
       resume: "/resume/Om_Mistry_Resume.pdf",
       responseTime: "Usually within 24 hours",
     },
@@ -212,7 +236,10 @@ export const portfolioData = {
         target: "hero-name",
         text: "Welcome! This is my portfolio. Let me show you around.",
       },
-      { target: "about-title", text: "Learn about my experience and skills here." },
+      {
+        target: "about-title",
+        text: "Learn about my experience and skills here.",
+      },
       { target: "skills-title", text: "Check out my technical expertise." },
       { target: "projects-title", text: "Explore my real-world projects." },
       {
