@@ -30,6 +30,16 @@ section {
   padding-right: 1.5rem;
 }
 
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 /* Advanced Animations */
 @keyframes fadeInUp {
   from {
@@ -530,21 +540,13 @@ section {
 
 /* Custom scrollbar enhanced */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #60a5fa 0%, #a78bfa 100%);
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%);
-  box-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /* Small Screen Adjustments */
