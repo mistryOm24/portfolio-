@@ -11,7 +11,7 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
 
   return (
     <>
-      {!isLeadsPage && <CustomCursor />}
+      <CustomCursor />
       {!isLeadsPage && <Navbar />}
       {children}
       {!isLeadsPage && <Footer />}
